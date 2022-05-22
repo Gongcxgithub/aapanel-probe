@@ -20,7 +20,7 @@
 
 如需查看实现效果请看：https://probe.gcxstudio.cn
 
-Support my development on [爱发电](https://afdian.net/@GBCLStudio)!
+帮助我的开发 [爱发电](https://afdian.net/@GBCLStudio)!
 
 求 Star 喵喵喵：
 
