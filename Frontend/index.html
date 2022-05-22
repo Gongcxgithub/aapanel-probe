@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Use the UTF-8 character -->
+    <link
+      rel="icon"
+      href="https://v2.gcxstudio.cn/favicon.ico"
+      type="image/x-icon"
+    />
+    <!--Logo-->
+    <title>Gong_cx's Auto Probe</title>
+    <!--title-->
+    <meta name="author" content="Powered by Gong_cx" />
+    <!--SEO-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--Mobile adaptation-->
+    <meta name="copyright" content="Copyright 2020-2022 GBCLStudio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://new.gcxstudio.cn" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:image" content="https://v2.gcxstudio.cn/favicon.ico" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <script
+      src="https://v2.gcxstudio.cn/global-cdn/mdui/js/mdui.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://v2.gcxstudio.cn/global-cdn/jquery/3.6.0/jquery.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://v2.gcxstudio.cn/global-cdn/mdui/css/mdui.min.css"
+      crossorigin="anonymous"
+    />
+    <link href="/static/main.css" rel="stylesheet" crossorigin="anonymous" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+  </head>
+  <body
+    class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-layout-auto"
+  >
+    <header class="appbar mdui-appbar mdui-appbar-fixed">
+      <div class="mdui-toolbar mdui-color-blue-accent">
+        <span
+          class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white"
+          mdui-drawer="{target: '#main-drawer', swipe: true}"
+        >
+          <i class="mdui-icon material-icons">menu</i>
+        </span>
+        <a
+          href="/"
+          class="mdui-typo-headline mdui-hidden-xs"
+          one-link-mark="yes"
+          >Auto Probe</a
+        >
+        <a
+          href="/"
+          class="mdui-typo-subheading-opacity mdui-ripple"
+          one-link-mark="yes"
+          >首页</a
+        >
+      </div>
+    </header>
+    <div class="mdui-drawer" id="main-drawer">
+      <div
+        class="mdui-list copyright"
+        mdui-collapse="{accordion: true}"
+        style="margin-bottom: 76px"
+      >
+        <a href="/" class="mdui-ripple">
+          <li class="mdui-list-item mdui-ripple">
+            <i
+              class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-deep-orange"
+              >&#xe88a;</i
+            >
+            <div class="mdui-list-item-content">主页</div>
+          </li></a
+        >
+        <div class="mdui-collapse-item">
+          <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+            <i
+              class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue"
+              >near_me</i
+            >
+            <div class="mdui-list-item-content">主机列表</div>
+            <i class="mdui-collapse-item-arrow mdui-icon material-icons"
+              >keyboard_arrow_down</i
+            >
+          </div>
+          <div
+            class="mdui-collapse-item-body mdui-list mdui-collapse-item-open"
+          >
+            <div
+              class="mdui-collapse-item-body mdui-list mdui-collapse-item-open"
+            >
+              <a
+                href="/list/tencent-shanghai.html"
+                class="mdui-list-item mdui-ripple"
+                one-link-mark="yes"
+                >腾讯云上海</a
+              >
+            </div>
+
+            <div
+              class="mdui-collapse-item-body mdui-list mdui-collapse-item-open"
+            >
+              <a
+                href="/list/azure-australia.html"
+                class="mdui-list-item mdui-ripple"
+                one-link-mark="yes"
+                >微软云澳大利亚</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="root">
+      <div class="introduce">
+        <h1 class="title">Gong_cx's <strong>Auto Probe</strong></h1>
+        <span class="meta"
+          >Gong_cx
+          的私人探针服务，在线获取当前服务器信息，实时查看负载情况。</span
+        >
+        <div class="more-meta mdui-typo">
+          <span class="current">当前版本：Beta v1.0.1</span
+          ><span
+            ><a
+              href="https://new.gcxstudio.cn"
+              rel="nofollow"
+              target="_blank"
+              one-link-mark="yes"
+              >个人博客</a
+            ></span
+          ><span>|</span
+          ><span
+            ><a
+              href="https://github.com/GBCLStudio"
+              rel="nofollow"
+              target="_blank"
+              one-link-mark="yes"
+              >Github</a
+            ></span
+          ><span>|</span
+          ><span
+            ><a
+              href="http://wpa.qq.com/msgrd?v=3&uin=3175992523&site=qq&menu=yes"
+              rel="nofollow"
+              target="_blank"
+              one-link-mark="yes"
+              >南极企鹅</a
+            ></span
+          >
+        </div>
+      </div>
+      <div class="advantage">
+        <h2>特色</h2>
+        <div class="mdui-clearfix flex-center">
+          <ul class="mdui-list advantage-list">
+            <li class="mdui-list-item mdui-ripple">
+              <i
+                class="mdui-list-item-avatar mdui-icon material-icons mdui-color-blue mdui-text-color-white"
+                >ac_unit</i
+              >
+              <div class="mdui-list-item-content">
+                <div class="mdui-list-item-title">极限效率</div>
+                <div class="mdui-list-item-text">
+                  基于 aaPanel 的 API 服务，提供高达 0 % 的极限效率，综合可用率
+                  ≥ 0.9999%
+                </div>
+              </div>
+              <i class="mdui-list-item-icon mdui-icon material-icons">info</i>
+            </li>
+            <li class="mdui-list-item mdui-ripple">
+              <i
+                class="mdui-list-item-avatar mdui-icon material-icons mdui-color-indigo mdui-text-color-white"
+                >access_alarm</i
+              >
+              <div class="mdui-list-item-content">
+                <div class="mdui-list-item-title">极限 SLA</div>
+                <div class="mdui-list-item-text">
+                  自动探针服务提供高达 ≥ 0.69999% 的服务可用率，数据可用性极废
+                </div>
+              </div>
+              <i
+                class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-grey-400"
+                >info</i
+              >
+            </li>
+            <li class="mdui-list-item mdui-ripple">
+              <i
+                class="mdui-list-item-avatar mdui-icon material-icons mdui-color-pink mdui-text-color-white"
+                >lock_outline</i
+              >
+              <div class="mdui-list-item-content">
+                <div class="mdui-list-item-title">内核级多重防御架构</div>
+                <div class="mdui-list-item-text">
+                  母机全部采用 aaPanel 极限效率防火墙，外加 Cloudflare
+                  泛播加持，打满 1G 立刻宕机
+                </div>
+              </div>
+              <i
+                class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-grey-400"
+                >info</i
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <footer class="copy-footer">
+      <span class="copy-text">
+        Copyright by
+        <a href="https://new.gcxstudio.cn" target="_blank" class="copy-link"
+          >Gong_cx</a
+        >
+        | Powered by
+        <a
+          href="https://www.aapanel.com/index.html"
+          target="_blank"
+          class="copy-link"
+          >aaPanel</a
+        ></span
+      ><br /><a
+        href="https://beian.miit.gov.cn/"
+        target="_blank"
+        class="copy-link"
+        >赣ICP备2021005460号-1</a
+      >
+      |
+      <a
+        href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=36010302000349"
+        target="_blank"
+        class="copy-link"
+        >赣公网安备 36010302000349号</a
+      >
+    </footer>
+  </body>
+</html>

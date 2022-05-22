@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Use the UTF-8 character -->
+    <link
+      rel="icon"
+      href="https://v2.gcxstudio.cn/favicon.ico"
+      type="image/x-icon"
+    />
+    <!--Logo-->
+    <title>网站标题</title>
+    <!--title-->
+    <meta name="author" content="Powered by Gong_cx" />
+    <!--SEO-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--Mobile adaptation-->
+    <meta name="copyright" content="Copyright 2020-2022 GBCLStudio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://new.gcxstudio.cn" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:image" content="https://v2.gcxstudio.cn/favicon.ico" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <script
+      src="https://v2.gcxstudio.cn/global-cdn/mdui/js/mdui.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://v2.gcxstudio.cn/global-cdn/jquery/3.6.0/jquery.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/static/sweetalert.min.js" crossorigin="anonymous"></script>
+    <script src="/static/getinfo-azure.js" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://v2.gcxstudio.cn/global-cdn/mdui/css/mdui.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://v2.gcxstudio.cn/global-cdn/font-awesome/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link href="/static/main.css" rel="stylesheet" crossorigin="anonymous" />
+    <link href="/static/probe.css" rel="stylesheet" crossorigin="anonymous" />
+    <script
+      src="https://v2.gcxstudio.cn/global-cdn/odometer/odometer.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://v2.gcxstudio.cn/global-cdn/odometer/odometer-theme-minimal.css"
+      crossorigin="anonymous"
+    />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+  </head>
+  <body
+    class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-layout-auto"
+  >
+    <header class="appbar mdui-appbar mdui-appbar-fixed">
+      <div class="mdui-toolbar mdui-color-blue-accent">
+        <span
+          class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white"
+          mdui-drawer="{target: '#main-drawer', swipe: true}"
+        >
+          <i class="mdui-icon material-icons">menu</i>
+        </span>
+        <a
+          href="../"
+          class="mdui-typo-headline mdui-hidden-xs"
+          one-link-mark="yes"
+          >服务商</a
+        >
+        <a
+          href="./"
+          class="mdui-typo-subheading-opacity mdui-ripple"
+          one-link-mark="yes"
+          >首页</a
+        >
+        <a
+          href="./probe/"
+          class="mdui-typo-subheading-opacity mdui-ripple"
+          one-link-mark="yes"
+          >探针</a
+        >
+      </div>
+    </header>
+    <div class="mdui-drawer" id="main-drawer">
+      <div
+        class="mdui-list copyright"
+        mdui-collapse="{accordion: true}"
+        style="margin-bottom: 76px"
+      >
+        <a href="/" class="mdui-ripple">
+          <li class="mdui-list-item mdui-ripple">
+            <i
+              class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-deep-orange"
+              >&#xe88a;</i
+            >
+            <div class="mdui-list-item-content">主页</div>
+          </li></a
+        >
+        <div class="mdui-collapse-item">
+          <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+            <i
+              class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue"
+              >near_me</i
+            >
+            <div class="mdui-list-item-content">主机列表</div>
+            <i class="mdui-collapse-item-arrow mdui-icon material-icons"
+              >keyboard_arrow_down</i
+            >
+          </div>
+          <div
+            class="mdui-collapse-item-body mdui-list mdui-collapse-item-open"
+          >
+            <a
+              href="/list/tencent-shanghai.html"
+              class="mdui-list-item mdui-ripple"
+              one-link-mark="yes"
+              >服务器</a
+            >
+          </div>
+          <div
+            class="mdui-collapse-item-body mdui-list mdui-collapse-item-open"
+          >
+            <a
+              href="/list/azure-australia.html"
+              class="mdui-list-item mdui-ripple"
+              one-link-mark="yes"
+              >服务器</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="root">
+      <div class="introduce">
+        <h1 class="title"><strong>服务器信息 | 自动探针</strong></h1>
+        <span class="meta"
+          >服务器信息 | 将自动获取诸如系统概览，实时负载等信息。</span
+        ><br />
+        <br />
+        <span class="meta"
+          >服务器额定配置：上下行带宽为 Unknown | 基础配置 1C1G | 位置
+          半人马座三星</span
+        >
+        <div class="more-meta mdui-typo">
+          <span class="current">当前版本：Beta v1.2.6</span
+          ><span>
+            <!--改成你的博客 --><a
+              href="https://new.gcxstudio.cn"
+              rel="nofollow"
+              target="_blank"
+              one-link-mark="yes"
+              >个人博客</a
+            ></span
+          ><span>|</span
+          ><span
+            ><!--改成你的 GayHub --><a
+              href="https://github.com/GBCLStudio"
+              rel="nofollow"
+              target="_blank"
+              one-link-mark="yes"
+              >Github</a
+            ></span
+          ><span>|</span
+          ><span
+            ><!--改成你的企鹅 --><a
+              href="http://wpa.qq.com/msgrd?v=3&uin=3175992523&site=qq&menu=yes"
+              rel="nofollow"
+              target="_blank"
+              one-link-mark="yes"
+              >南极企鹅</a
+            ></span
+          >
+        </div>
+      </div>
+      <!--以下内容无需再动 -->
+      <div class="advantage">
+        <h2>系统概览</h2>
+        <div class="mdui-clearfix flex-center">
+          <ul class="mdui-list advantage-list">
+            <li class="mdui-list-item mdui-ripple">
+              <i
+                class="mdui-list-item-avatar mdui-icon material-icons mdui-color-blue mdui-text-color-white"
+                >&#xe640;</i
+              >
+              <div class="mdui-list-item-content">
+                <div class="mdui-list-item-title">CPU 核心数</div>
+                <div class="mdui-list-item-text">
+                  CPU 型号：<span id="cpuInfo_WHAT">未知</span><br />
+                  CPU 核心数：<span
+                    id="cpuNum"
+                    class="odometer odometer-auto-theme"
+                    >0.0</span
+                  ><span> 个</span>
+                  <br />
+                  CPU 使用率：
+                  <span
+                    id="cpuRealUsed_text"
+                    class="odometer odometer-auto-theme"
+                    >0.0</span
+                  ><span> %</span>
+                  <div class="mdui-progress">
+                    <div
+                      class="mdui-progress-determinate"
+                      id="cpuRealUsed"
+                      style="width: 100%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <i class="mdui-list-item-icon mdui-icon material-icons">info</i>
+            </li>
+            <li class="mdui-list-item mdui-ripple">
+              <i
+                class="mdui-list-item-avatar mdui-icon material-icons mdui-color-indigo mdui-text-color-white"
+                >&#xe01d;</i
+              >
+              <div class="mdui-list-item-content">
+                <div class="mdui-list-item-title">操作系统</div>
+                <div class="mdui-list-item-text">
+                  系统：<span id="os">未知</span>
+                </div>
+              </div>
+              <i
+                class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-grey-400"
+                >info</i
+              >
+            </li>
+            <li class="mdui-list-item mdui-ripple">
+              <i
+                class="mdui-list-item-avatar mdui-icon material-icons mdui-color-pink mdui-text-color-white"
+                >&#xeb3f;</i
+              >
+              <div class="mdui-list-item-content">
+                <div class="mdui-list-item-title">面板信息</div>
+                <div class="mdui-list-item-text">
+                  面板名：<span id="panelTitle">未知</span>
+                  <br />
+                  面板运行版本：<span
+                    id="msg_version"
+                    class="odometer odometer-auto-theme"
+                    >0.0.0</span
+                  >
+                  <br />
+                  面板运行时间：
+                  <span id="running_time">0.0 天</span>
+                </div>
+              </div>
+              <i
+                class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-grey-400"
+                >info</i
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="advantage">
+        <h2>内存信息</h2>
+        <div class="mdui-clearfix flex-center">
+          <ul class="mdui-list advantage-list">
+            <li class="mdui-list-item mdui-ripple">
+              <i
+                class="mdui-list-item-avatar mdui-icon material-icons mdui-color-amber mdui-text-color-white"
+                >&#xe875;</i
+              >
+              <div class="mdui-list-item-content">
+                <div class="mdui-list-item-title">基础数据</div>
+                <div class="mdui-list-item-text">
+                  <div class="mdui-list-item-text">
+                    RAM 总数：<span
+                      id="memTotal"
+                      class="odometer odometer-auto-theme"
+                      >0.0</span
+                    ><span> MB</span>
+                    <br />
+                    RAM 已用：
+                    <span
+                      id="memRealUsed_text"
+                      class="odometer odometer-auto-theme"
+                      >0.0</span
+                    ><span> MB</span>
+                    <div class="mdui-progress">
+                      <div
+                        class="mdui-progress-determinate"
+                        id="memRealUsed"
+                        style="width: 100%"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <i class="mdui-list-item-icon mdui-icon material-icons">info</i>
+            </li>
+            <li class="mdui-list-item mdui-ripple">
+              <i
+                class="mdui-list-item-avatar mdui-icon material-icons mdui-color-brown mdui-text-color-white"
+                >&#xe1c2;</i
+              >
+              <div class="mdui-list-item-content">
+                <div class="mdui-list-item-title">其他信息</div>
+                <div class="mdui-list-item-text">
+                  缓存化内存：<span
+                    id="memCached"
+                    class="odometer odometer-auto-theme"
+                    >0.0</span
+                  ><span> MB</span>
+                  <br />
+                  系统缓存：
+                  <span id="memBuffers" class="odometer odometer-auto-theme"
+                    >0.0</span
+                  ><span> MB</span>
+                </div>
+              </div>
+              <i
+                class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-grey-400"
+                >info</i
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="advantage">
+        <h2>网络信息</h2>
+        <div class="mdui-clearfix flex-center">
+          <ul class="mdui-list advantage-list">
+            <li class="mdui-list-item mdui-ripple">
+              <i
+                class="mdui-list-item-avatar mdui-icon material-icons mdui-color-teal mdui-text-color-white"
+                >&#xe2c4;</i
+              >
+              <div class="mdui-list-item-content">
+                <div class="mdui-list-item-title">下行数据</div>
+                <div class="mdui-list-item-text">
+                  <div class="mdui-list-item-text">
+                    下行实时信息：<span
+                      id="downRealTime"
+                      class="odometer odometer-auto-theme"
+                      >0.0</span
+                    ><span> KB/S</span>
+                    <br />
+                    下行实时收包量：
+                    <span id="downPackets" class="odometer odometer-auto-theme"
+                      >0.0</span
+                    ><span> 万个</span><br />
+                    下行总流量：
+                    <span id="downTotal" class="odometer odometer-auto-theme"
+                      >0.0</span
+                    ><span> GB</span>
+                  </div>
+                </div>
+              </div>
+              <i class="mdui-list-item-icon mdui-icon material-icons">info</i>
+            </li>
+            <li class="mdui-list-item mdui-ripple">
+              <i
+                class="mdui-list-item-avatar mdui-icon material-icons mdui-color-cyan mdui-text-color-white"
+                >&#xe2c6;</i
+              >
+              <div class="mdui-list-item-content">
+                <div class="mdui-list-item-title">上行信息</div>
+                <div class="mdui-list-item-text">
+                  上行实时信息：<span
+                    id="upRealTime"
+                    class="odometer odometer-auto-theme"
+                    >0.0</span
+                  ><span> KB/S</span>
+                  <br />
+                  上行实时发包量：<span
+                    id="upPackets"
+                    class="odometer odometer-auto-theme"
+                    >0.0</span
+                  ><span> 万个</span>
+                  <br />
+                  上行总流量：
+                  <span id="upTotal" class="odometer odometer-auto-theme"
+                    >0.0</span
+                  ><span> GB</span>
+                </div>
+              </div>
+              <i
+                class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-grey-400"
+                >info</i
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="advantage">
+        <h2>硬盘信息</h2>
+        <div class="mdui-clearfix flex-center">
+          <ul class="mdui-list advantage-list">
+            <li class="mdui-list-item mdui-ripple">
+              <i
+                class="mdui-list-item-avatar mdui-icon material-icons mdui-color-lime mdui-text-color-white"
+                >&#xe2c7;</i
+              >
+              <div class="mdui-list-item-content">
+                <div class="mdui-list-item-title">基础信息</div>
+                <div class="mdui-list-item-text">
+                  <div class="mdui-list-item-text">
+                    文件系统：
+                    <span id="diskSystem">未知</span>
+                  </div>
+                </div>
+              </div>
+              <i class="mdui-list-item-icon mdui-icon material-icons">info</i>
+            </li>
+            <li class="mdui-list-item mdui-ripple">
+              <i
+                class="mdui-list-item-avatar mdui-icon material-icons mdui-color-orange mdui-text-color-white"
+                >&#xe24d;</i
+              >
+              <div class="mdui-list-item-content">
+                <div class="mdui-list-item-title">分区信息</div>
+                <div class="mdui-list-item-text">
+                  总容量：<span id="diskTotal">0.0</span>
+                  <br />
+                  已用：<span id="diskUsed">0.0</span>
+                  <br />
+                  可用：
+                  <span id="diskFree">0.0</span>
+                  <br />
+                  分区格式：
+                  <span id="diskType">未知</span>
+                  <br />
+                  使用率：
+                  <span id="diskPercentage">00</span>
+                  <div class="mdui-progress">
+                    <div
+                      class="mdui-progress-determinate"
+                      id="diskPercentageProgress"
+                      style="width: 100%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <i
+                class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-grey-400"
+                >info</i
+              >
+            </li>
+            <li class="mdui-list-item mdui-ripple">
+              <i
+                class="mdui-list-item-avatar mdui-icon material-icons mdui-color-blue-grey mdui-text-color-white"
+                >&#xe31f;</i
+              >
+              <div class="mdui-list-item-content">
+                <div class="mdui-list-item-title">Inodes 信息</div>
+                <div class="mdui-list-item-text">
+                  总容量：<span
+                    id="inodesTotal"
+                    class="odometer odometer-auto-theme"
+                    >0.0</span
+                  ><span> KB</span>
+                  <br />
+                  已用：<span
+                    id="inodesUsed"
+                    class="odometer odometer-auto-theme"
+                    >0.0</span
+                  ><span> KB</span>
+                  <br />
+                  可用：
+                  <span id="inodesFree" class="odometer odometer-auto-theme"
+                    >00</span
+                  ><span> KB</span><br />
+                  挂载点：
+                  <span id="inodesType">未知</span><br />
+                  使用率：
+                  <span id="inodesPercentage">0.0 %</span>
+                  <div class="mdui-progress">
+                    <div
+                      class="mdui-progress-determinate"
+                      id="inodesPercentageProgress"
+                      style="width: 100%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <i
+                class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-grey-400"
+                >info</i
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="advantage">
+        <h2>实时负载</h2>
+        <div class="mdui-clearfix flex-center">
+          <ul class="mdui-list advantage-list">
+            <li class="mdui-list-item mdui-ripple">
+              <i
+                class="mdui-list-item-avatar mdui-icon material-icons mdui-color-deep-orange mdui-text-color-white"
+                >&#xe16a;</i
+              >
+              <div class="mdui-list-item-content">
+                <div class="mdui-list-item-title">负载点数</div>
+                <div class="mdui-list-item-text">
+                  <div class="mdui-list-item-text">
+                    1 分钟内平均负载：<span id="minuteAverage">0.0</span>
+                    <br />
+                    5 分钟内平均负载：
+                    <span id="fiveMinuteAverage">0.0</span>
+                    <br />
+                    15 分钟内平均负载：
+                    <span id="fiveteenMinuteAverage">0.0</span>
+                    <br />
+                    最高负载：
+                    <span id="maxAverage">0.0</span>
+                  </div>
+                </div>
+              </div>
+              <i class="mdui-list-item-icon mdui-icon material-icons">info</i>
+            </li>
+            <li class="mdui-list-item mdui-ripple">
+              <i
+                class="mdui-list-item-avatar mdui-icon material-icons mdui-color-purple mdui-text-color-white"
+                >&#xe0c6;</i
+              >
+              <div class="mdui-list-item-content">
+                <div class="mdui-list-item-title">详细负载信息</div>
+                <div class="mdui-list-item-text">
+                  user：<span id="user" class="odometer odometer-auto-theme"
+                    >00</span
+                  >
+                  <br />
+                  nice：<span id="nice" class="odometer odometer-auto-theme"
+                    >00</span
+                  >
+                  <br />
+                  system：<span id="system" class="odometer odometer-auto-theme"
+                    >00</span
+                  >
+                  <br />
+                  idle：<span id="idle" class="odometer odometer-auto-theme"
+                    >00</span
+                  >
+                  <br />
+                  iowait：<span id="iowait" class="odometer odometer-auto-theme"
+                    >00</span
+                  >
+                  <br />
+                  irq：<span id="irq" class="odometer odometer-auto-theme"
+                    >00</span
+                  >
+                  <br />
+                  softirq：<span
+                    id="softirq"
+                    class="odometer odometer-auto-theme"
+                    >00</span
+                  >
+                  <br />
+                  steal：<span id="steal" class="odometer odometer-auto-theme"
+                    >00</span
+                  >
+                  <br />
+                  guest：<span id="guest" class="odometer odometer-auto-theme"
+                    >00</span
+                  >
+                  <br />
+                  guest_nice：<span
+                    id="guest_nice"
+                    class="odometer odometer-auto-theme"
+                    >00</span
+                  >
+                </div>
+              </div>
+              <i
+                class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-grey-400"
+                >info</i
+              >
+            </li>
+            <li class="mdui-list-item mdui-ripple">
+              <i
+                class="mdui-list-item-avatar mdui-icon material-icons mdui-color-light-green mdui-text-color-white"
+                >&#xe801;</i
+              >
+              <div class="mdui-list-item-content">
+                <div class="mdui-list-item-title">进程信息</div>
+                <div class="mdui-list-item-text">
+                  总进程数：<span
+                    id="processes"
+                    class="odometer odometer-auto-theme"
+                    >00</span
+                  ><span> 个</span>
+                  <br />
+                  活动进程数：
+                  <span
+                    id="activeProcesses"
+                    class="odometer odometer-auto-theme"
+                    >00</span
+                  ><span> 个</span>
+                </div>
+              </div>
+              <i
+                class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-grey-400"
+                >info</i
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="advantage">
+        <h2>IOStat 实时信息</h2>
+        <div class="mdui-clearfix flex-center">
+          <ul class="mdui-list advantage-list">
+            <li class="mdui-list-item mdui-ripple">
+              <i
+                class="mdui-list-item-avatar mdui-icon material-icons mdui-color-amber mdui-text-color-white"
+                >&#xe875;</i
+              >
+              <div class="mdui-list-item-content">
+                <div class="mdui-list-item-title">读操作</div>
+                <div class="mdui-list-item-text">
+                  <div class="mdui-list-item-text">
+                    read_bytes：<span
+                      id="read_bytes"
+                      class="odometer odometer-auto-theme"
+                      >0.0</span
+                    ><span> Bytes</span>
+                    <br />
+                    read_count：
+                    <span id="read_count" class="odometer odometer-auto-theme"
+                      >0.0</span
+                    ><br />
+                    read_merged_count：
+                    <span
+                      id="read_merged_count"
+                      class="odometer odometer-auto-theme"
+                      >0.0</span
+                    ><br />
+                    read_time：
+                    <span id="read_time" class="odometer odometer-auto-theme"
+                      >0.0</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <i class="mdui-list-item-icon mdui-icon material-icons">info</i>
+            </li>
+            <li class="mdui-list-item mdui-ripple">
+              <i
+                class="mdui-list-item-avatar mdui-icon material-icons mdui-color-brown mdui-text-color-white"
+                >&#xe1c2;</i
+              >
+              <div class="mdui-list-item-content">
+                <div class="mdui-list-item-title">写操作</div>
+                <div class="mdui-list-item-text">
+                  write_bytes：<span
+                    id="write_bytes"
+                    class="odometer odometer-auto-theme"
+                    >0.0</span
+                  ><span> Bytes</span>
+                  <br />
+                  write_count：
+                  <span id="write_count" class="odometer odometer-auto-theme"
+                    >0.0</span
+                  ><br />
+                  write_merged_count：
+                  <span
+                    id="write_merged_count"
+                    class="odometer odometer-auto-theme"
+                    >0.0</span
+                  ><br />
+                  write_time：
+                  <span id="write_time" class="odometer odometer-auto-theme"
+                    >0.0</span
+                  >
+                </div>
+              </div>
+              <i
+                class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-grey-400"
+                >info</i
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <footer class="copy-footer">
+      <span class="copy-text">
+        Copyright by
+        <a href="https://new.gcxstudio.cn" target="_blank" class="copy-link"
+          >Gong_cx</a
+        >
+        | Powered by
+        <a
+          href="https://www.aapanel.com/index.html"
+          target="_blank"
+          class="copy-link"
+          >aaPanel</a
+        ></span
+      ><br />
+      <!--改成你的备案号 --><a
+        href="https://beian.miit.gov.cn/"
+        target="_blank"
+        class="copy-link"
+        >赣ICP备2021005460号-1</a
+      >
+      |
+      <a
+        href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=36010302000349"
+        target="_blank"
+        class="copy-link"
+        >赣公网安备 36010302000349号</a
+      >
+    </footer>
+  </body>
+</html>

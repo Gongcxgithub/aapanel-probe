@@ -1,0 +1,126 @@
+#root {
+  padding-right: 16px;
+  padding-left: 16px;
+  line-height: 1.6;
+  color: #3c5675;
+}
+#root .introduce {
+  padding-top: 96px;
+  padding-bottom: 64px;
+  text-align: center;
+}
+#root .introduce .title {
+  margin: 0 0 24px;
+  font-weight: 400;
+  font-size: 32px;
+}
+#root .introduce .title strong {
+  color: #1a73e8;
+  font-weight: 400;
+}
+#root .introduce .meta {
+  margin: 0 auto 48px;
+  font-size: 20px;
+  opacity: 0.76;
+}
+#root .introduce .more-meta {
+  padding-top: 48px;
+}
+#root .introduce .more-meta span + span {
+  padding-left: 18px;
+}
+#root .introduce .more-meta .current {
+  opacity: 0.76;
+}
+#root .advantage h2 {
+  padding-bottom: 40px;
+}
+#root .advantage h2 {
+  margin: 0;
+  padding-bottom: 24px;
+  color: #1a73e8;
+  font-weight: 400;
+  font-size: 28px;
+  text-align: center;
+}
+#root .advantage {
+  padding: 48px 0 56px;
+}
+.advantage-list {
+  width: 100%;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+#p .copyright:after {
+  content: "Powered by Gong_cx";
+  margin-top: 16px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 200;
+  opacity: 0.5;
+  pointer-events: none;
+}
+.copy-footer {
+  width: 100%;
+  text-align: center;
+  opacity: 0.76;
+  color: #8ab4f8;
+  margin-bottom: 8px;
+}
+.copy-text {
+  font-size: 14px;
+  line-height: 14px;
+}
+.copy-link {
+  text-decoration: underline;
+  color: #8ab4f8;
+}
+@media screen and (prefers-color-scheme: dark) {
+  #root {
+    color: #bfbfbf;
+  }
+  #root a {
+    color: #8ab4f8 !important;
+  }
+  #root a:before {
+    background-color: #8ab4f8;
+  }
+  #root .introduce .title strong {
+    color: #8ab4f8;
+  }
+  #root .advantage .icon path {
+    fill: #8ab4f8;
+  }
+  #root .advantage h2 {
+    color: #8ab4f8;
+  }
+}
+@media screen and (max-width: 1300px) {
+  #root .advantage {
+    padding: 32px 0 40px;
+  }
+  #root .advantage .icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 16px;
+  }
+  #root .advantage h2 {
+    padding-bottom: 16px;
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .advantage-list {
+    margin: 0 8% 0 8%;
+  }
+}
